@@ -30,11 +30,11 @@ export async function getAnimalById(id) {
 export async function addAnimal(name, description, color, race, age) {
   try {
     const animal = new animalModel({
-      name: name,
-      description: description,
-      color: color,
-      race: race,
-      age: age,
+      name,
+      description,
+      color,
+      race,
+      age,
       free: true,
     });
     await animal.save();
