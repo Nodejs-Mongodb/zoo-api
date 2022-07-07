@@ -16,8 +16,6 @@ export const authenticateJWT = async (req, res, next) => {
         token,
         ecPublicKey
       );
-
-      console.log(payload, protectedHeader);
       next();
     } catch (error) {
       res.status(401).send(`Error : ${error.message}`);
