@@ -25,8 +25,8 @@ export async function getAllFree(req, res) {
 
 export async function getById(req, res) {
   try {
-    const animals = await getAnimalById(req.params.id);
-    res.send(animals);
+    const animal = await getAnimalById(req.params.id);
+    res.send(animal);
   } catch (error) {
     res.status(400).send(error.message);
   }

@@ -11,8 +11,8 @@ export async function getAnimals() {
 
 export async function getFreeAnimals() {
   try {
-    const animal = await animalModel.find({ free: true });
-    return animal;
+    const animals = await animalModel.find({ free: true });
+    return animals;
   } catch (error) {
     return `Service error: "${error.message}"`;
   }
