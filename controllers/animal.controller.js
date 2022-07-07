@@ -3,6 +3,7 @@ import {
   getAnimals,
   getAnimalById,
   getFreeAnimals,
+  modifyAnimal,
 } from "../services/animal.service.js";
 
 export async function getAll(req, res) {
@@ -41,6 +42,15 @@ export async function addNewAnimal(req, res) {
       req.body.race,
       req.body.age
     );
+    res.send(newAnimal);
+  } catch (error) {
+    res.status(400).send(error.message);
+  }
+}
+
+export async function editAnimal(req, res) {
+  try {
+    const newAnimal = await modifyAnimal(req.params.id, req.body);
     res.send(newAnimal);
   } catch (error) {
     res.status(400).send(error.message);

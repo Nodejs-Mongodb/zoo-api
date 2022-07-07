@@ -43,3 +43,14 @@ export async function addAnimal(name, description, color, race, age) {
     return `Service error: "${error.message}"`;
   }
 }
+
+export async function modifyAnimal(id, body) {
+  try {
+    const updatedAnimal = await enclosureModel.findByIdAndUpdate(id, body, {
+      new: true,
+    });
+    return updatedAnimal;
+  } catch (errors) {
+    return `Service error: "${error.message}"`;
+  }
+}
