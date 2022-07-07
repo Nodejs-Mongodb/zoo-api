@@ -6,6 +6,7 @@ import initDb from "./initDb.js";
 import dotenv from "dotenv";
 import { animalRouter } from "./routes/animal.route.js";
 import { enclosureRouter } from "./routes/enclosure.route.js";
+import { authRouter } from "./routes/auth.router.js";
 
 dotenv.config();
 
@@ -41,6 +42,7 @@ app.get("/init-db", (req, res) => {
   }
 });
 
+app.use("/", authRouter);
 app.use("/api", animalRouter);
 app.use("/api", enclosureRouter);
 
