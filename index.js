@@ -3,7 +3,6 @@ import express, { response } from "express";
 // const mongoose = require("mongoose");
 import mongoose from "mongoose";
 import initDb from "./initDb.js";
-import router from "./router.js";
 import dotenv from "dotenv";
 import { animalRouter } from "./routes/animal.route.js";
 import { enclosureRouter } from "./routes/enclosure.route.js";
