@@ -29,7 +29,7 @@ export default function initDb(nbAnimals, nbEnclosures) {
       method: "POST",
       headers: {
         authorization:
-          "Bearer eyJhbGciOiJFUzI1NiJ9.eyJ1cm46ZXhhbXBsZTpjbGFpbSI6dHJ1ZSwiaWF0IjoxNjU3MTg4MzExLCJpc3MiOiJRdWVudGluIEhpcmliYXJuZSIsImF1ZCI6ImxvY2FsaG9zdDozMDAwIiwiZXhwIjoxNjU3MTk1NTExfQ.Zf1Sd3jRECd19K8xQYUXiMCnPPOQSW29O9Q8vCQP_fW_9guTJDZhBbTWSSy3FH82Y0GN_nDgfLoOgpcfPa0YrA",
+          "Bearer eyJhbGciOiJFUzI1NiJ9.eyJ1cm46ZXhhbXBsZTpjbGFpbSI6dHJ1ZSwiaWF0IjoxNjU3MTk4MjEyLCJpc3MiOiJMb3Vpc2UiLCJhdWQiOiJsb2NhbGhvc3Q6MzAwMCIsImV4cCI6MTY1NzIwNTQxMn0.JvaYmMy7s-IIAWuxBdQhIe5xte2RXZPqp5yiigsxSrRNzlzwowcmXdussJrFpbTyjKkrTpbFlI7IxriF66srXw",
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
