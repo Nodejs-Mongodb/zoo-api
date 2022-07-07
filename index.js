@@ -32,7 +32,13 @@ app.get("/", (req, res) => {
 });
 
 app.get("/init-db", (req, res) => {
-  initDb(1);
+  try {
+    initDb(50, 10);
+    res.status(200).send("init db successfully");
+  } catch (error) {
+    res.status(error.code).send(error.message);
+    console.log("Error: ", error);
+  }
 });
 
 app.use("/api", animalRouter);
