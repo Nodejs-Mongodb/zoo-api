@@ -46,7 +46,7 @@ export async function addAnimal(name, description, color, race, age) {
 
 export async function modifyAnimal(id, body) {
   try {
-    const updatedAnimal = await enclosureModel.findByIdAndUpdate(id, body, {
+    const updatedAnimal = await animalModel.findByIdAndUpdate(id, body, {
       new: true,
     });
     return updatedAnimal;
