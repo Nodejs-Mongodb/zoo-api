@@ -1,0 +1,334 @@
+{
+	"info": {
+		"_postman_id": "e07090ca-4306-4540-8dc8-96d5aedf4b5a",
+		"name": "Zoo API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21793632"
+	},
+	"item": [
+		{
+			"name": "Animals",
+			"item": [
+				{
+					"name": "Get all animals",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/animals",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"animals"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all free animals",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/free-animals",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"free-animals"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get animal by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/animals/:id?=62c67c4c94a6615e59d7cc8d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"animals",
+								":id"
+							],
+							"query": [
+								{
+									"key": null,
+									"value": "62c67c4c94a6615e59d7cc8d"
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "62c67c4c94a6615e59d7cc8d"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add new animal",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Loulou\",\n    \"description\": \"Petite baleine blanche\",\n    \"color\": \"white\",\n    \"race\": \"whale\",\n    \"age\": 25,\n    \"free\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/new-animal",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"new-animal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit animal",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Fishy\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/edit-animal/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"edit-animal",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "62c67c4c94a6615e59d7cc8d"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Enclosures",
+			"item": [
+				{
+					"name": "Get all enclosures",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/enclosures",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"enclosures"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all enclosure by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/enclosures/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"enclosures",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "62c67c7bda2975c016182187"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add new enclosure",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"test2\",\n    \"limit\": 5\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/new-enclosure",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"new-enclosure"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit enclosure",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"limit\": 12\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/edit-enclosure/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"edit-enclosure",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "62c67c7bda2975c016182187"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"Louise\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJFUzI1NiJ9.eyJ1cm46ZXhhbXBsZTpjbGFpbSI6dHJ1ZSwiaWF0IjoxNjU3MTk4OTkyLCJpc3MiOiJMb3Vpc2UiLCJhdWQiOiJsb2NhbGhvc3Q6MzAwMSIsImV4cCI6MTY1NzIwNjE5Mn0.Z00pp6evNSPArdndvdEROI_yuJAug3L0kA3IE4QDbSLlWBkVB3NHtX4V9Q2-KzOaFeasNo9iHFnAfWUl8f6AhA",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
