@@ -11,7 +11,7 @@ export async function getJWT(username) {
       .setProtectedHeader({ alg: "ES256" })
       .setIssuedAt()
       .setIssuer(username)
-      .setAudience("localhost:3000")
+      .setAudience(`localhost:${process.env.PORT}`)
       .setExpirationTime("2h")
       .sign(ecPrivateKey);
   } catch (error) {
