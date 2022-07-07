@@ -32,11 +32,12 @@ export async function addEnclosure(name, limit) {
   }
 }
 
-export async function modifyEnclosure(body) {
+export async function modifyEnclosure(id, body) {
   try {
-    const enclosure = new enclosureModel(body);
-    await enclosure.save();
-    return enclosure;
+    const updatedEnclosure = await enclosureModel.findByIdAndUpdate(id, body, {
+      new: true,
+    });
+    return updatedEnclosure;
   } catch (errors) {
     return `Service error: "${error.message}"`;
   }

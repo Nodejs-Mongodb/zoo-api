@@ -34,7 +34,7 @@ export async function addNewEnclosure(req, res) {
 
 export async function editEnclosure(req, res) {
   try {
-    const newEnclosure = await modifyEnclosure(req.body);
+    const newEnclosure = await modifyEnclosure(req.params.id, req.body);
     res.send(newEnclosure);
   } catch (error) {
     res.status(400).send(error.message);
