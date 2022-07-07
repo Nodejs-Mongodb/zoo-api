@@ -4,7 +4,7 @@ Faire une API NodeJS aec Express, avec une exposition de routes sur le thème d'
 
 ## Routes
 
-Nous utilisons Postman pour tester les routes.
+Nous utilisons Postman pour tester les routes. La collection a été exportée et ajoutée au repo sous le nom "Zoo API.postman_collection.json".
 Pour générer un token il faut aller sur la route /login, il sera envoyé en réponse. 
 Pour utiliser la route initDB il faut changer en dur le Bearer Token dans le fichier initDB.js (récupération correcte pas mise en place).
 
