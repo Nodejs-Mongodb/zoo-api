@@ -18,7 +18,7 @@ export async function getFreeAnimals() {
   }
 }
 
-export async function getAnimalsById(id) {
+export async function getAnimalById(id) {
   try {
     const animal = await animalModel.findById(id);
     return animal;

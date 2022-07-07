@@ -12,6 +12,7 @@ export async function getAll(req, res) {
 export async function addNewEnclosure(req, res) {
   try {
     const newEnclosure = await addEnclosure(req.body.name, req.body.limit);
+    res.send(newEnclosure);
   } catch (error) {
     res.status(400).send(error.message);
   }

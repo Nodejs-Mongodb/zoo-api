@@ -1,7 +1,7 @@
 import {
   addAnimal,
   getAnimals,
-  getAnimalsById,
+  getAnimalById,
   getFreeAnimals,
 } from "../services/animal.service.js";
 
@@ -25,7 +25,7 @@ export async function getAllFree(req, res) {
 
 export async function getById(req, res) {
   try {
-    const animals = await getAnimalsById(req.params.id);
+    const animals = await getAnimalById(req.params.id);
     res.send(animals);
   } catch (error) {
     res.status(400).send(error.message);
@@ -41,6 +41,7 @@ export async function addNewAnimal(req, res) {
       req.body.race,
       req.body.age
     );
+    res.send(newAnimal);
   } catch (error) {
     res.status(400).send(error.message);
   }
